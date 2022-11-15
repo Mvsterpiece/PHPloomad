@@ -64,32 +64,28 @@ if(isset($_REQUEST['kustuta'])) {
             echo "</div>";
         }
     }
-        if(isset($_REQUEST['lisaloom']))
-        {
-            ?>
-            <h2>Uue looma lisamine</h2>
-            <form name="uusloom"method="post" action="?">
-                <input type="hidden" name="lisamisvorm" value="jah">
-                <input type="text" name="loomatuup" placeholder="Loomatüüp">
-                <br>
-                <input type="text" name="nimi" placeholder="Looma nimi">
-                <br>
-                <input type="text" name="vanus" placeholder="Looma vanus">
-                <br>
-                <textarea name="pilt">Siia lisa pildi aadress.</textarea>
-                <br>
-                <label>Vali silmadevärv.</label>
-                <input type="color" id="varv" name="silmadevarv">
-                <br>
-                <input type="submit" value="OK">
-            </form>
-    <?php
+        else if(isset($_REQUEST['lisaloom'])){
+            echo "<h2>Uue looma lisamine</h2>";
+            echo "<form name='uusloom'method='post' action='?'>";
+            echo "<input type='hidden' name='lisamisvorm' value='jah'>";
+            echo "<input type='text' name='loomatuup' placeholder='Loomatüüp'>";
+            echo "<br>";
+            echo "<input type='text' name='nimi' placeholder='Looma nimi'>";
+            echo "<br>";
+            echo "<input type='text' name'vanus' placeholder='Looma vanus'>";
+            echo "<br>";
+            echo "<textarea name='pilt'>Siia lisa pildi aadress.</textarea>";
+            echo "<br>";
+            echo "<label>Vali silmadevärv.</label>";
+            echo "<input type='color' id='varv' name='silmadevarv'>";
+            echo "<br>";
+            echo "<input type='submit' value='OK'>";
+            echo "</form>";
         }
         else{
-            echo("<h3>siia tuleb loomade sisu</h3>");
+            echo "<h3>siia tuleb loomade sisu</h3>";
         }
-    ?>
+        ?>
 </div>
 </body>
 </html>
-
